@@ -1,26 +1,28 @@
-import React, { useState } from 'react';
-
+import { useState } from "react";
 
 const Navbar = () => {
-  const [nav, setNav] = useState(false);
-
-  const handleNav = () => {
-    setNav(!nav);
-  };
-
   return (
-    <div className='flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-white'>
-      <h1 className='w-full text-3xl font-bold text-[#00df9a]'>REACT.</h1>
-      <ul className='hidden md:flex'>
-
-
-        <li > <button className='p-4 text-#537D5D'>Home</button></li>
-        <li className='p-4'> <button>About</button></li>
-        <li className='p-4'> <button>Projects</button></li>
-        <li className='p-4'> <button>Contact</button></li>
-
-      </ul>
-
+    <div className="flex justify-center items-center h-24 w-screen text-white border-8 border-amber-300">
+      <div className="border-4 border-amber-950 rounded-4xl ">
+        <ul className="flex">
+          <li>
+            {" "}
+            <button className="p-4 text-black font-bold">Home</button>
+          </li>
+          <li>
+            {" "}
+            <button className="p-4 text-black font-bold">About</button>
+          </li>
+          <li>
+            {" "}
+            <button className="p-4 text-black">Projects</button>
+          </li>
+          <li>
+            {" "}
+            <button className="p-4 text-black">Contact</button>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };

@@ -3,26 +3,26 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className="text-white">
-      <div className="max-w-[800px] mt-[-96px] w-full h-screen mx-auto text-center flex flex-col justify-center">
-        <h1 className="md:text-7xl sm:text-6xl text-4xl font-bold md:py-6">
-          Lucas
+    <div className="flex flex-row justify-center">
+      <div className="h-screen text-center mx-10 flex flex-col justify-center border-4 border-green-300">
+        <h1 className="text-4xl font-bold md:py-6">
+          Lucas Roberts
         </h1>
 
         <div className="flex justify-center items-center ">
-          <p className="md:text:5xl sm:text-4xl text-xl font-bold py-3">
-            fast flexible financing for
+          <p className="text-xl font-bold py-3">
+            Full-stack web developer
           </p>
  
         </div>
-        <p className="md:text-2xl text-xl font-bold text-gray-500">
-          {" "}
-          monitor your data analytics to increase revenue for BTB, BTC & SASS
-          platforms
-        </p>
+
 
         
       </div>
+      <div className="border-8 border-amber-300 mx-10">
+        hello
+     </div>
+
     </div>
   );
 };
