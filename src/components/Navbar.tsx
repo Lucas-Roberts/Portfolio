@@ -2,8 +2,8 @@ import { useState } from "react";
 
 const Navbar = () => {
   return (
-    <div className="flex justify-center items-center h-24 w-screen text-white border-8 border-amber-300">
-      <div className="border-4 border-amber-950 rounded-4xl ">
+    <div className="flex justify-center items-center h-24 w-vw">
+      <div className="border-4 border-amber-950 bg-[#FFFDF6] rounded-4xl ">
         <ul className="flex">
           <li>
             {" "}
