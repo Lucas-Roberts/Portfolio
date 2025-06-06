@@ -6,16 +6,22 @@ import Contact from "./components/Contact";
 import Projects from "./components/Projects";
 
 function App() {
-
   return (
-    <>
-      <Navbar />
-      <Hero />
-      <About />
-      <Projects/>
-      <Contact />
+    <div>
+      <div className="h-[97dvh] w-full">
+        <Navbar />
+        <Hero />
+      </div>
 
-    </>
+      <div className="h-[97dvh] w-full bg-amber-100">
+        <About />
+      </div>
+
+      <div className="h-[97dvh] w-full bg-amber-100">
+        <Projects />
+      </div>
+      <Contact />
+    </div>
   );
 }
 
