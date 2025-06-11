@@ -6,9 +6,9 @@ import { FaYoutube } from "react-icons/fa";
 
 const Hero = () => {
   return (
-    <div className="flex flex-row justify-evenly ">
-      <div className="flex flex-col h-vh w-xl text-[#FFFDF6] ">
-        <h1 className="text-5xl font-bold py-2 text-left">
+    <div className="flex flex-row justify-evenly border-2 border-amber-950">
+      <div className="flex flex-col w-2xl text-[#FFFDF6]  border-2 border-amber-100 ">
+        <h1 className="text-6xl font-bold py-2 text-left">
           Hi, I'm Lucas Roberts | Software Engineer
         </h1>
 
