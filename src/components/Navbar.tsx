@@ -1,29 +1,31 @@
 import { useState } from "react";
 
 const Navbar = () => {
+  const [active, setActive] = useState("Home");
 
-  const [section, setSection] = useState("Home")
-  
-  
+  const navItems = ["Home", "About", "Projects", "Contact"];
 
   return (
-    <div className="flex justify-center items-center h-22 w-vw">
-      <div className="border-2 border-gray-400 border-opacity-90 h-12 flex items-center bg-[#FFFDF6] rounded-4xl ">
-        <ul className="flex">
-          <li>
-            <button className="p-4 text-black font-bold">Home</button>
+    <div className="fixed top-6 left-1/2 -translate-x-1/2 z-50 px-1 flex items-center 
+                    bg-white/13 backdrop-blur-sm border h-13 border-gray-200/25 
+                    rounded-full shadow-lg">
+      
+      <ul className="flex ">
+        {navItems.map((item) => (
+          <li key={item}>
+            <button
+              className={`px-5 py-2 rounded-full text-white transition-all duration-300 ${
+                active === item
+                  ? "bg-amber-400 text-white shadow-lg"
+                  : "hover:text-amber-500"
+              }`}
+              onClick={() => setActive(item)}
+            >
+              {item}
+            </button>
           </li>
-          <li>
-            <button className="p-4 text-black font-bold">About</button>
-          </li>
-          <li>
-            <button className="p-4 text-black font-bold">Projects</button>
-          </li>
-          <li>
-            <button className="p-4 text-black font-bold">Contact</button>
-          </li>
-        </ul>
-      </div>
+        ))}
+      </ul>
     </div>
   );
 };

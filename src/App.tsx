@@ -8,18 +8,22 @@ import Projects from "./components/Projects";
 function App() {
   return (
     <div>
-      <div className="h-[97dvh] w-full">
+      <nav className="justify-center">
         <Navbar />
+      </nav>
+
+      <div className="h-[97dvh] w-full">
         <Hero />
       </div>
 
-      <div className="h-[97dvh] w-full bg-amber-100">
+      <div className="h-[97dvh] w-full ">
         <About />
       </div>
 
       <div className="h-[97dvh] w-full bg-amber-100">
         <Projects />
       </div>
+
       <Contact />
     </div>
   );
