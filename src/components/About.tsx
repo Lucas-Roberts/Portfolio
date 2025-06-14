@@ -4,6 +4,7 @@ import { RiTailwindCssFill } from "react-icons/ri";
 import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
+import IconStack from "./IconStack";
 
 const icons = [
   <FaReact size={32} key="react" />,
@@ -20,29 +21,7 @@ const About = () => {
     <div className="flex flex-row w-full h-full items-center justify-evenly py-12">
       {/* Profile Image */}
 
-      {/* Stack Icon Section */}
-      <div className="inline-flex w-fit">
-        <ThemeProvider theme={theme}>
-          <Stack alignItems="center" spacing={2}>
-            {icons.map((icon, index) => (
-              <Box
-                key={index}
-                sx={{
-                  backgroundColor: "#abc273",
-                  p: 1,
-                  borderRadius: 2,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  boxShadow: 2,
-                }}
-              >
-                {icon}
-              </Box>
-            ))}
-          </Stack>
-        </ThemeProvider>
-      </div>
+      <IconStack icons={icons}></IconStack>
 
       <div className="border-2 h-full w-130 border-amber-400 p-10" >
         <h2 className="text-white font-bold text-2xl ">About Me</h2>

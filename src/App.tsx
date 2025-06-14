@@ -13,6 +13,7 @@ function App() {
       </nav>
 
       <div className="h-[97dvh] w-full">
+        
         <Hero />
       </div>
 
