@@ -15,11 +15,11 @@ const icons = [
 ];
 
 const iconText = [ 
-  "youtube",
-  "github"
+  "",
+  "",
+  "",
+  "Farnborough, Hampshire"
 ]
-
-
 
 const Hero = () => {
   return (
@@ -29,16 +29,8 @@ const Hero = () => {
           Hi, I'm Lucas Roberts | Software Engineer
         </h1>
 
-
-        <div>
-
         <IconStack icons={icons} iconText={iconText} />
-          <div className="flex items-center h-10 pr-2.5 opacity-70 border-2 rounded-full">
-            <CiLocationOn size={32} /> Farnborough, Hampshire
-          </div>
-
-        </div>
-     
+        
         <div className="flex items-center opacity-75 w-100 my-6">
           <p className="text-lg leading-6 font-medium text-left">
             I am a Bournemouth University graduate and a full-stack web

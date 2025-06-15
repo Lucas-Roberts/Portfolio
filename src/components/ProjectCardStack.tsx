@@ -1,15 +1,15 @@
 import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
 
-interface IconStackProps {
-  icons: React.ReactNode[];
-  iconText: string[];
+interface ProjectStackProps {
+  Project: string[];
+  ProjectDesc: string[];
 }
 
-const IconStack = ({ icons, iconText }: IconStackProps) => {
+const ProjectCardStack = ({ Project, ProjectDesc }: ProjectStackProps) => {
   return (
     <Stack direction={"row"} flexWrap={"wrap"} rowGap={1} spacing={2}>
-      {icons.map((icon, index) => (
+      {Project.map((Project, index) => (
         <Box
           key={index}
           className="bg-white/13 border border-gray-200/25 backdrop-blur-sm shadow-lg"
@@ -21,14 +21,21 @@ const IconStack = ({ icons, iconText }: IconStackProps) => {
             alignItems: "center",
             justifyContent: "center",
             boxShadow: 2,
+            width: 380,
+            height: 500,
           }}
         >
-          {icon}
-          <span className="pl-1">{iconText[index]}</span>
+          
+        
+          {Project}
+          {ProjectDesc[index]}
+
+
+          
         </Box>
       ))}
     </Stack>
   );
 };
 
-export default IconStack;
+export default ProjectCardStack;

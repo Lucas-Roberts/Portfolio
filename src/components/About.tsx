@@ -1,9 +1,7 @@
 import { FaReact, FaCss3Alt, FaHtml5, FaPython } from "react-icons/fa";
 import { SiTypescript, SiFlask } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
-import Stack from "@mui/material/Stack";
-import Box from "@mui/material/Box";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
+
 import IconStack from "./IconStack";
 
 const icons = [
@@ -16,47 +14,53 @@ const icons = [
   <RiTailwindCssFill size={32} key="tailwind" />,
 ];
 
+const iconText = [
+  "react",
+  "Typescript",
+  "Flask",
+  "CSS",
+  "HTML",
+  "Python",
+  "Tailwind",
+];
+
 const About = () => {
   return (
-    <div className="flex flex-row w-full h-full items-center justify-evenly py-12">
-      {/* Profile Image */}
+    <div className="flex w-full h-full items-center justify-evenly ">
+  
 
-      <IconStack icons={icons}></IconStack>
 
-      <div className="border-2 h-full w-130 border-amber-400 p-10" >
-        <h2 className="text-white font-bold text-2xl ">About Me</h2>
-        <p className="text-white">  I enjoy building projects that focus on usability, repsonsivness and attention to detail. All of the projects that you will see are fully deployed, I hope by looking at my projects you get a feel for who I am; an inquistive programmer that loves to solve problems!
-        </p>
+
+  
+      <div className="flex flex-col justify-evenly h-full w-130  p-10">
         
-      </div>
+        <div>
+          <h2 className="text-white font-bold text-3xl mb-5 ">About Me</h2>
+          <p className="text-white text-lg">
+            {" "}
+            I enjoy building projects that focus on usability, repsonsivness and
+            attention to detail. All of the projects that you will see are fully
+            deployed, I hope by looking at my projects you get a feel for who I
+            am; an inquistive programmer that loves to solve problems!
+          </p>
+        </div>
+        <div>
+          <h2 className="text-white font-bold text-3xl mb-5">Skills</h2>
 
-            <div className="border-8 w-110 border-amber-300">
-        <img
-          className="w-full rounded-3xl shadow-2xl"
-          src="/images/IMG_4126.png"
-          alt="Profile"
-        />
-      </div>
+          <IconStack icons={icons} iconText={iconText}></IconStack>
+          </div>
+        </div>
 
-
-
+        <div className="w-110 ">
+          <img
+            className="w-full rounded-3xl shadow-2xl"
+            src="/images/IMG_4126.png"
+            alt="Profile"
+          />
+        </div>
+  
     </div>
   );
 };
 
-const theme = createTheme({
-  components: {
-    MuiStack: {
-      styleOverrides: {
-        root: {
-          height: "fit-content",
-          borderRadius: 10,
-          padding: 8,
-        },
-      },
-    },
-  },
-});
-
 export default About;
-

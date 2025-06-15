@@ -1,25 +1,53 @@
 const Contact = () => {
+  
+  
+  
   return (
-    <div className="flex flex-row justify-center">
-      <div className="h-vh text-center mx-2 w-110 text-[#FFFDF6] pr-11 pb-15 flex flex-col justify-center border-4 border-green-300">
-        <h1 className="text-4xl font-bold md:py-6">
-          Lucas Roberts
-        </h1>
+    <div className="flex flex-row justify-center h-[35dvh] w-full p-9">
 
-        <div className="flex justify-center items-center ">
-          <p className="text-xl font-bold ">
-            Full-stack web developer
-          </p>
- 
+      <div className="flex h-full w-full   rounded-lg bg-white/13 border border-gray-200/25 backdrop-blur-sm shadow-lg ">
+
+
+        <div className="flex h-full w-[65%] font-bold text-5xl items-center justify-center">
+          <h2 className="text-white">Lucas Roberts.</h2>
         </div>
+
+        <div className="flex flex-col h-full w-[15%] items-center justify-center">
+          <h4 className="text-white font-medium text-lg">Explore</h4>
+
+          <button className="text-white">Home</button>
+          <button className="text-white">About</button>
+          <button className="text-white">Projects</button>
+          <button className="text-white">Contact</button>
+          
+
+        </div>
+
+        <div className="flex flex-col h-full w-[15%] items-center justify-center">
+          <h4 className="text-white font-medium text-lg">Let's Connect</h4>
+
+          <button className="text-white">Linkedin</button>
+          <button className="text-white">Youtube</button>
+          <button className="text-white">Instagram</button>
+          <button className="text-white">Github</button>
+
+        
+        </div>
+
+        
+
+      
+      
+      
+      
+      
+      
+      
+      </div>
 
 
         
-      </div>
-      <div className="border-8 w-110 border-amber-300 mx-2  ">
-        <img className="w-full rounded-3xl shadow-2xl" src="/images/IMG_4126.png">
-        </img>
-     </div>
+
 
     </div>
   );

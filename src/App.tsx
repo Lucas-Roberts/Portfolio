@@ -21,7 +21,7 @@ function App() {
         <About />
       </div>
 
-      <div className="h-[97dvh] w-full bg-amber-100">
+      <div className="h-[97dvh] w-full ">
         <Projects />
       </div>
 
