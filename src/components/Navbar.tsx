@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
+
 
 const Navbar = () => {
   const [active, setActive] = useState("Home");
@@ -12,9 +13,10 @@ const Navbar = () => {
                     rounded-full shadow-lg"
     >
       <ul className="flex ">
-        {navItems.map((item) => (
+        {navItems.map((item, index) => (
           <li key={item}>
-            <button
+            <a
+              href={"#" + item}
               className={`px-5 py-2 rounded-full text-white transition-all duration-300 ${
                 active === item
                   ? "bg-amber-400 text-white shadow-lg"
@@ -23,7 +25,7 @@ const Navbar = () => {
               onClick={() => setActive(item)}
             >
               {item}
-            </button>
+            </a>
           </li>
         ))}
       </ul>

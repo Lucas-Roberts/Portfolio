@@ -15,10 +15,10 @@ const Contact = () => {
         <div className="flex flex-col h-full w-[15%] items-center justify-center">
           <h4 className="text-white font-medium text-lg">Explore</h4>
 
-          <button className="text-white">Home</button>
-          <button className="text-white">About</button>
-          <button className="text-white">Projects</button>
-          <button className="text-white">Contact</button>
+          <a href="https://mangakatana.com/manga/the-ember-knight.25919/c157" className="text-white hover:underline">Hello</a>
+          <a href="https://mangakatana.com/manga/the-ember-knight.25919/c157" className="text-white hover:underline">Hello</a>
+          <a href="https://mangakatana.com/manga/the-ember-knight.25919/c157" className="text-white hover:underline">Hello</a>
+          <a href="https://mangakatana.com/manga/the-ember-knight.25919/c157" className="text-white hover:underline">Hello</a>
           
 
         </div>
@@ -26,10 +26,12 @@ const Contact = () => {
         <div className="flex flex-col h-full w-[15%] items-center justify-center">
           <h4 className="text-white font-medium text-lg">Let's Connect</h4>
 
-          <button className="text-white">Linkedin</button>
-          <button className="text-white">Youtube</button>
-          <button className="text-white">Instagram</button>
-          <button className="text-white">Github</button>
+          <a href="https://mangakatana.com/manga/the-ember-knight.25919/c157" className="text-white hover:underline">Linkedin</a>
+          <a href="https://mangakatana.com/manga/the-ember-knight.25919/c157" className="text-white hover:underline">Youtube</a>
+          <a href="https://mangakatana.com/manga/the-ember-knight.25919/c157" className="text-white hover:underline">Leetcode</a>
+          <a href="https://github.com/Lucas-Roberts" className="text-white hover:underline">Github</a>
+
+  
 
         
         </div>
