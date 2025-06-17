@@ -4,24 +4,49 @@ import { RiTailwindCssFill } from "react-icons/ri";
 
 import IconStack from "./IconStack";
 
-const icons = [
-  <FaReact size={32} key="react" />,
-  <SiTypescript size={32} key="ts" />,
-  <SiFlask size={32} key="flask" />,
-  <FaCss3Alt size={32} key="css" />,
-  <FaHtml5 size={32} key="html" />,
-  <FaPython size={32} key="python" />,
-  <RiTailwindCssFill size={32} key="tailwind" />,
-];
-
-const iconText = [
-  "react",
-  "Typescript",
-  "Flask",
-  "CSS",
-  "HTML",
-  "Python",
-  "Tailwind",
+const iconData = [
+  {
+    icon: <FaReact size={32} />,
+    text: "React",
+    isLink: false,
+    link: "",
+  },
+  {
+    icon: <SiTypescript size={32} />,
+    text: "TypeScript",
+    isLink: false,
+    link: "",
+  },
+  {
+    icon: <SiFlask size={32} />,
+    text: "Flask",
+    isLink: false,
+    link: "",
+  },
+  {
+    icon: <FaCss3Alt size={32} />,
+    text: "CSS",
+    isLink: false,
+    link: "",
+  },
+  {
+    icon: <FaHtml5 size={32} />,
+    text: "HTML",
+    isLink: false,
+    link: "",
+  },
+  {
+    icon: <FaPython size={32} />,
+    text: "Python",
+    isLink: false,
+    link: "",
+  },
+  {
+    icon: <RiTailwindCssFill size={32} />,
+    text: "Tailwind",
+    isLink: false,
+    link: "",
+  },
 ];
 
 const About = () => {
@@ -47,7 +72,7 @@ const About = () => {
         <div>
           <h2 className="text-white font-bold text-3xl mb-5">Skills</h2>
 
-          <IconStack icons={icons} iconText={iconText}></IconStack>
+          <IconStack iconData={iconData} ></IconStack>
           </div>
         </div>
 

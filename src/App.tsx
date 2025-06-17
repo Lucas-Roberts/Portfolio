@@ -7,13 +7,13 @@ import Contact from "./components/Contact";
 import Projects from "./components/Projects";
 
 function App() {
-  // useEffect(() => {
+  useEffect(() => {
 
-  //   if ("scrollRestoration" in window.history) {
-  //     window.history.scrollRestoration = "manual";
-  //   }
-  //   window.scrollTo({ top: 0, behavior: "auto" });
-  // }, []);
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+    window.scrollTo({ top: 0, behavior: "auto" });
+  }, []);
 
   return (
     <div>

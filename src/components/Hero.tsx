@@ -5,21 +5,33 @@ import { FaYoutube } from "react-icons/fa";
 import { CiLocationOn } from "react-icons/ci";
 import IconStack from "./IconStack";
 
-const icons = [
-
-  <FaGithub size={32} key="github" />,
-  <FaYoutube size={32} key="youtube" />,
-  <FaLinkedin size={32} key="linkedin" />,
-  <CiLocationOn size={32}>Farnborugh,Hampshire</CiLocationOn>
-
+const iconData = [
+  {
+    icon: <FaGithub size={32} key="github" />,
+    text: "",
+    isLink: true,
+    link: "https://github.com/Lucas-Roberts",
+  },
+  {
+    icon: <FaYoutube size={32} key="youtube" />,
+    text: "",
+    isLink: false,
+    link: "",
+  },
+  {
+    icon: <FaLinkedin size={32} key="linkedin" />,
+    text: "",
+    isLink: false,
+    link: "",
+  },
+  {
+    icon: <CiLocationOn size={32} key="location" />,
+    text: "Farnborough, Hampshire",
+    isLink: false,
+    link: "",
+  },
 ];
 
-const iconText = [ 
-  "",
-  "",
-  "",
-  "Farnborough, Hampshire"
-]
 
 const Hero = () => {
   return (
@@ -29,7 +41,7 @@ const Hero = () => {
           Hi, I'm Lucas Roberts | Software Engineer
         </h1>
 
-        <IconStack icons={icons} iconText={iconText} />
+        <IconStack iconData={iconData} />
         
         <div className="flex items-center opacity-75 w-100 my-6">
           <p className="text-lg leading-6 font-medium text-left">

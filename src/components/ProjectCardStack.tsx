@@ -1,81 +1,76 @@
-import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+import * as React from "react";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Button from "@mui/material/Button";
+import { Stack } from "@mui/material";
+import { alpha } from "@mui/material";
 
-interface ProjectStackProps {
-  Project: string[];
-  ProjectDesc: string[];
-  ProjectImg: string[];
+interface ProjectCard {
+  name: string;
+  description: string;
+  image: string;
+  liveLink: string;
+  sourceCodeLink: string;
 }
 
-const ProjectCardStack = (
-  //{
-//   Project,
-//   ProjectDesc,
-//   ProjectImg,
-// }: ProjectStackProps
-) => {
+interface ProjectCardStackProps {
+  projectCardData: ProjectCard[];
+}
+
+const ProjectCardStack = ({ projectCardData }: ProjectCardStackProps) => {
   return (
-    // <Stack direction={"row"} flexWrap={"wrap"} rowGap={1} spacing={3}>
-    //   {Project.map((Project, index) => (
-    //     <Card
-    //       key={index}
-    //       sx={{
-    //         color: "white",
-    //         borderRadius: 2,
-    //         display: "flex",
-    //         alignItems: "center",
-    //         justifyContent: "center",
-    //         boxShadow: 2,
-    //         width: 380,
-    //         height: 500,
-    //       }}
-    //     >
-    //       <div>
-    //         <div className="flex overflow-hidden w-full h-60 ratio-video border border-amber-300">
-    //           <CardMedia
-    //             component={"img"}
-                
-              
-                
-    //           ></CardMedia>
-    //         </div>
-
-    //         <div className="flex bg-amber-300 h-40 ">
-    //           {Project}
-
-    //           {ProjectDesc[index]}
-    //         </div>
-    //       </div>
-    //     </Card>
-    //   ))}
-    // </Stack>
-
-    <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
-        sx={{ height: 140 }}
-        image="/images/IMG_4126.png"
-        title="green iguana"
-      />
-      <CardContent>
-
-        <h2>
-          Lizard
-        </h2>
-        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
+    <Stack direction="row" flexWrap="wrap" rowGap={1} spacing={4}>
+      {projectCardData.map((project, index) => (
+        <Card
+          key={index}
+          
+          sx={{
+            background: alpha("#ffffff" ,0.13),
+            width: 345,
+            borderRadius: 3,
+            border: 1,
+            borderColor: alpha("#e5e7eb", 0.25),
+          }}
+        >
+          <CardMedia
+            
+            component="img"
+            image={project.image}
+            title={project.name}
+            sx={{
+              height: 300, // fixed height for image container
+              width: "100%",
+              objectFit: "cover", // maintain aspect ratio & crop overflow
+              background: "black"
+            }}
+          />
+          <CardContent>
+            <h2 className="text-white font-bold text-2xl ">{project.name}</h2>
+            <p className="text-white font-semibold leading-5 ">{project.description}</p>
+          </CardContent>
+          <CardActions>
+            <Button
+              size="small"
+              href={project.liveLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Live
+            </Button>
+            <Button
+              size="small"
+              href={project.sourceCodeLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Source Code
+            </Button>
+          </CardActions>
+        </Card>
+      ))}
+    </Stack>
   );
 };
 
