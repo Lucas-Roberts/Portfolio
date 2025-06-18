@@ -10,42 +10,49 @@ const iconData = [
     text: "React",
     isLink: false,
     link: "",
+    hoverColor: "blue"
   },
   {
     icon: <SiTypescript size={32} />,
     text: "TypeScript",
     isLink: false,
     link: "",
+    hoverColor: "blue"
   },
   {
     icon: <SiFlask size={32} />,
     text: "Flask",
     isLink: false,
     link: "",
+    hoverColor: "blue"
   },
   {
     icon: <FaCss3Alt size={32} />,
     text: "CSS",
     isLink: false,
     link: "",
+    hoverColor: "blue"
   },
   {
     icon: <FaHtml5 size={32} />,
     text: "HTML",
     isLink: false,
     link: "",
+    hoverColor: "blue"
   },
   {
     icon: <FaPython size={32} />,
     text: "Python",
     isLink: false,
     link: "",
+    hoverColor: "blue"
   },
   {
     icon: <RiTailwindCssFill size={32} />,
     text: "Tailwind",
     isLink: false,
     link: "",
+    hoverColor: "blue"
   },
 ];
 
